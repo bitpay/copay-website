@@ -1,0 +1,11 @@
+{
+  "name": "bitpay-website",
+  "version": "0.0.1",
+  "homepage": "https://bitpay.com/",
+  "private": true,
+  "dependencies": {
+    "instantclick": "~3.1.0",
+    "foundation": "~5.5.2",
+    "angular": "~1.3.15"
+  }
+}
