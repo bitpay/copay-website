@@ -1,9 +1,9 @@
 .logo {
   width: 72px;
-  height: 25px;
+  height: 30px;
   margin-bottom: 0.4rem;
   display: inline-block;
-  background-image: url('../images/copay-logo.svg');
+  background-image: url('../images/copay-logo-white.svg');
   background-repeat: no-repeat;
   z-index: 2;
   position: relative;
@@ -11,7 +11,7 @@
     margin-bottom: 1.4rem;
   }
   .white-header & {
-    background-image: url('../images/bitpay-logo-primary.svg');
+    background-image: url('../images/copay-logo-dark.svg');
   }
 }
 
