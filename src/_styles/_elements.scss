@@ -25,14 +25,6 @@ html {
   height: inherit;
 }
 
-body {
-  background: #0E1C40;
-}
-
-.container {
-  background-color: #ffffff;
-}
-
 .section {
   @extend .padding-vertical;
   @extend .large-padding-vertical-most;
