@@ -11,6 +11,13 @@
       background: darken($blue-light, 5%);
     }
   }
+  &-white-border {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid $white !important;
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+  }
   &-blue-border {
     background: rgba(255,255,255,0.05);
     &:hover {
