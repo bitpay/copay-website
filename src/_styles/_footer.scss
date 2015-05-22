@@ -1,1 +1,6 @@
-//
+footer .menu-item {
+  color: $gray-medium;
+  &:hover {
+    color: $gray-darkest;
+  }
+}
