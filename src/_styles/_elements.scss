@@ -30,6 +30,11 @@ html {
   @extend .large-padding-vertical-most;
 }
 
+.bg-dark .section {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
 #instantclick-bar {
   background: $blue-light;
 }

@@ -18,6 +18,13 @@
       background: rgba(255,255,255,0.1);
     }
   }
+  &-gray-medium-border {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid $gray-medium !important;
+    &:hover {;
+      background: rgba(255,255,255,0.1);
+    }
+  }
   &-blue-border {
     background: rgba(255,255,255,0.05);
     &:hover {
