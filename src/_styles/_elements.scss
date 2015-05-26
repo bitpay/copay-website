@@ -38,3 +38,25 @@ html {
 #instantclick-bar {
   background: $blue-light;
 }
+
+.text.text-right,
+.text.text-left {
+  @media #{$small-only}, #{$medium-only} {
+    text-align: center !important;
+  }
+}
+
+footer {
+  @media #{$small-only} {
+    text-align: center;
+    padding: 1em !important;
+    ul.inline-list {
+      margin: 10px auto;
+      font-size: 0.8em;
+    &.right {
+      float: none !important;
+    }
+    }
+  }
+
+}
