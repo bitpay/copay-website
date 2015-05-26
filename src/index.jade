@@ -1,7 +1,7 @@
 extends _layouts/primary
 
 block title
-  title Copay – the Secure, Shared Bitcoin Wallet
+  title Copay – BitPay's Open Source Multisignature Bitcoin Wallet
 
 block content
   .bg-dark(role="navigation")
@@ -35,16 +35,26 @@ block content
           
     .row.section
       .column.large-10.large-offset-1.text-center
-          h1.white.fade-in Build a better bitcoin wallet with us.
-          h5.white.medium-margin-top-less.medium-8.medium-offset-2.fade-in.delay-2 Secure, open source, multi-platform, bitcoin wallet from BitPay.
+          h1.white.fade-in We live on bitcoin. This is our wallet.
+      .column.large-10.large-offset-1.text-center
+          h3.white.medium-margin-top-less.medium-8.medium-offset-2.fade-in.delay-2 Copay, the open source, multisignature bitcoin wallet from BitPay.
           .margin-top-less.fade-in.delay-4
+          br
+      .column.large-12.fade-in.delay-6.text-left-align
+          h4.white.fade-in When we realized that we needed a more secure way to hold bitcoin, we decided to build our own.
+          h5.white.fade-in Many of our own team members live on bitcoin, and we knew we needed to make wallet security that would work for full-time bitcoin users. With that in mind, we created Copay, one of the first projects to bring the security and shareability of multisignature wallets together in a flexible finance tool for individuals and groups.
+          h5.white.fade-in From Copay's earliest days, we've been 100% open source, working with an international community of developers to build a wallet users could control – and secure – themselves. Now we're making our full 1.0 version available.
+          br
+          .margin-top-less.fade-in.delay-4.text-center
+            h4.white.fade-in.text-center Take control. Start using a bitcoin wallet made by and for bitcoiners.
             a(href="#").white.btn.btn-white-border.old.margin-left-less.btn-margin Download Copay
       
   .section
     .row
       .column.large-5.fade-in.delay-6.text-right
         h2.header__bottom-border-left.padding-top  Secure, Shared Wallets
-        p Secure your money with multiple signatures, or share and manage funds with friends, family or coworkers.
+        h4 Hold bitcoin, not IOU's. Secure personal funds with multiple signatures or manage shared funds with friends and coworkers.
+        p Copay's convenient multisignature security implementation and payment proposal flow makes it easy to save and spend together with other copayers.
       .column.large-7.fade-in.delay-6
         .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:450px;")
         
@@ -54,13 +64,15 @@ block content
         .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:450px;")
       .column.large-5.fade-in.delay-6
         h2.header__bottom-border-left.padding-top Multiple Wallets, One App
-        p Copay provides a simple, reliable way to create multiple wallets and keep up with your bitcoin finances, all without leaving the app.
+        h5 Create multiple wallets and keep up with all of your bitcoin finances, all without leaving the app.
+        p Copay is a hierarchical-deterministic (HD) wallet, allowing for easy, secure multi-wallet creation backups. For your security and privacy, each wallet generates new addresses for every transaction. 
         
   .section
     .row
       .column.large-5.fade-in.delay-6.text-right
         h2.header__bottom-border-left.padding-top Code You Can Trust 
-        p It's time to take control of your wallet. Audit Copay's open source code and collaborate with the project's developers on GitHub.
+        h5 An unexamined wallet is not worth using. Audit Copay's open source code and collaborate with the project's developers on GitHub.
+        p The Copay team has used feedback of the open source community to build the only bitcoin wallet with up to 97% code coverage.
       .column.large-7.fade-in.delay-6.text-right
         .icon.h2.background-contain(style="background-image: url('/images/code-trust.png'); height:450px;")    
         
@@ -69,14 +81,16 @@ block content
       .column.large-7.fade-in.delay-6
         .icon.h2.background-contain(style="background-image: url('/images/livenet-testnet.png'); height:450px;")
       .column.large-5.fade-in.delay-6
-        h2.header__bottom-border-left.padding-top Testnet Support
-        p Copay users can access bitcoin and testnet coins from the same app with the first and only testnet wallet for iOS and Windows Phone.
+        h2.header__bottom-border-left.padding-top Bitcoin Testnet Support
+        h5 Use bitcoin and testnet coins from the same app with the first and only testnet wallet for iOS and Windows Phone. 
+        p Whether you're building the next bitcoin payment product or trialing a new bitcoin service, Copay's testnet wallet feature lets you stay mobile with your testnet coins. 
         
   .section
     .row
       .column.large-5.fade-in.delay-6.text-right
-        h2.header__bottom-border-left.padding-top A Wallet Built for a Universal Payment Network 
-        p Bitcoin users shouldn't be limited by centralized account services. Copay uses universal Bitcoin standards to make transactions secure, simple, and smooth, every time. 
+        h2.header__bottom-border-left.padding-top Universal Payment Standards
+        h5 Don't be limited by centralized bitcoin account services. Copay transactions are simple and secure every time, no matter what payment services you use.
+        p Copay is invoice-agnostic. It's compatible with all BIP 71 (Traditional Bitcoin URI) or BIP 73 (Payment-protocol URI) QR code bitcoin payment requests.   
       .column.large-7.fade-in.delay-6
         .icon.h2.background-contain(style="background-image: url('/images/universal-network.png'); height:450px;")
   
@@ -84,7 +98,7 @@ block content
     .row
       .column.large-3.fade-in.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-globe.svg'); height:100px;")
-        span Prices In 150+ 
+        span Prices In  150+ 
         p Currencies 
       .column.large-3.fade-in.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-speech.svg'); height:100px;")
