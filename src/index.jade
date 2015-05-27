@@ -18,9 +18,11 @@ block content
           a.menu-item.small.white(href="") FAQ
         li
           a.menu-item.small.white(href="") View the Code  
+          
     .column.small-3.hide-for-large-up.margin-top.right
       a(href="javascript:;").right-off-canvas-toggle.menu-icon
-    
+        span
+          
     aside.right-off-canvas-menu
       ul.no-bullet.padding-left.padding-top-less
         li
@@ -51,65 +53,71 @@ block content
       
   .section
     .row
-      .column.large-5.fade-in.delay-6.text-right
-        h2.header__bottom-border-left.padding-top  Secure, Shared Wallets
-        h4 Hold bitcoin, not IOU's. Secure personal funds with multiple signatures or manage shared funds with friends and coworkers.
+      .column.large-7.fade-in.delay-6.hide-for-large-up
+        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:15em;")
+      .column.large-5.fade-in.delay-6.text.text-right
+        h2.header__bottom-border__large-right.padding-top  Secure, Shared Wallets
+        p Hold bitcoin, not IOU's. Secure personal funds with multiple signatures or manage shared funds with friends and coworkers.
         p Copay's convenient multisignature security implementation and payment proposal flow makes it easy to save and spend together with other copayers.
-      .column.large-7.fade-in.delay-6
-        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:450px;")
+      .column.large-7.fade-in.delay-6.show-for-large-up
+        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:15em;")
         
-  .section.bg-gray-gradient
+  .section.bg-gray
     .row
       .column.large-7.fade-in.delay-6
-        .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:450px;")
-      .column.large-5.fade-in.delay-6
-        h2.header__bottom-border-left.padding-top Multiple Wallets, One App
-        h5 Create multiple wallets and keep up with all of your bitcoin finances, all without leaving the app.
+        .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:15em;")
+      .column.large-5.fade-in.delay-6.text.text-left
+        h2.header__bottom-border__large-left.padding-top Multiple Wallets, One App
+        p Create multiple wallets and keep up with all of your bitcoin finances, all without leaving the app.
         p Copay is a hierarchical-deterministic (HD) wallet, allowing for easy, secure multi-wallet creation backups. For your security and privacy, each wallet generates new addresses for every transaction. 
         
   .section
     .row
-      .column.large-5.fade-in.delay-6.text-right
-        h2.header__bottom-border-left.padding-top Code You Can Trust 
-        h5 An unexamined wallet is not worth using. Audit Copay's open source code and collaborate with the project's developers on GitHub.
+      .column.large-7.fade-in.delay-6.hide-for-large-up
+        .icon.h2.background-contain(style="background-image: url('/images/code-trust.png'); height:15em;") 
+      .column.large-5.fade-in.delay-6.text.text-right
+        h2.header__bottom-border__large-right.padding-top Code You Can Trust 
+        p An unexamined wallet is not worth using. Audit Copay's open source code and collaborate with the project's developers on GitHub.
         p The Copay team has used feedback of the open source community to build the only bitcoin wallet with up to 97% code coverage.
-      .column.large-7.fade-in.delay-6.text-right
-        .icon.h2.background-contain(style="background-image: url('/images/code-trust.png'); height:450px;")    
+      .column.large-7.fade-in.delay-6.show-for-large-up
+        .icon.h2.background-contain(style="background-image: url('/images/code-trust.png'); height:15em;")    
         
-  .section.bg-gray-gradient
+  .section.bg-gray
     .row
       .column.large-7.fade-in.delay-6
-        .icon.h2.background-contain(style="background-image: url('/images/livenet-testnet.png'); height:450px;")
-      .column.large-5.fade-in.delay-6
-        h2.header__bottom-border-left.padding-top Bitcoin Testnet Support
-        h5 Use bitcoin and testnet coins from the same app with the first and only testnet wallet for iOS and Windows Phone. 
+        .icon.h2.background-contain(style="background-image: url('/images/livenet-testnet.png'); height:15em;")
+      .column.large-5.fade-in.delay-6.text.text-left
+        h2.header__bottom-border__large-left.padding-top Bitcoin Testnet Support
+        p Use bitcoin and testnet coins from the same app with the first and only testnet wallet for iOS and Windows Phone.
         p Whether you're building the next bitcoin payment product or trialing a new bitcoin service, Copay's testnet wallet feature lets you stay mobile with your testnet coins. 
         
   .section
     .row
-      .column.large-5.fade-in.delay-6.text-right
-        h2.header__bottom-border-left.padding-top Universal Payment Standards
-        h5 Don't be limited by centralized bitcoin account services. Copay transactions are simple and secure every time, no matter what payment services you use.
+      .column.large-7.fade-in.delay-6.hide-for-large-up
+        .icon.h2.background-contain(style="background-image: url('/images/universal-network.png'); height: 15em;")
+      .column.large-5.fade-in.delay-6.text.text-right
+        h2.header__bottom-border__large-right.padding-top Universal Payment Standards 
+        p Don't be limited by centralized bitcoin account services. Copay transactions are simple and secure every time, no matter what payment services you use.
         p Copay is invoice-agnostic. It's compatible with all BIP 71 (Traditional Bitcoin URI) or BIP 73 (Payment-protocol URI) QR code bitcoin payment requests.   
-      .column.large-7.fade-in.delay-6
-        .icon.h2.background-contain(style="background-image: url('/images/universal-network.png'); height:450px;")
-  
-  .section.bg-gray-gradient
+      .column.large-7.fade-in.delay-6.show-for-large-up
+        .icon.h2.background-contain(style="background-image: url('/images/universal-network.png'); height: 15em;")
+
+  .section.bg-gray
     .row
-      .column.large-3.fade-in.text-center
-        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-globe.svg'); height:100px;")
-        span Prices In  150+ 
+      .column.large-3.small-6.fade-in.text-center
+        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-globe.svg'); height:2.5em;")
+        span Prices In  150+ 
         p Currencies 
-      .column.large-3.fade-in.text-center
-        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-speech.svg'); height:100px;")
+      .column.large-3.small-6.fade-in.text-center
+        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-speech.svg'); height:2.5em;")
         span Multi-Language
         p  Support 
-      .column.large-3.fade-in.text-center
-        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-wallet-arrow-down.svg'); height:100px;")
+      .column.large-3.small-6.fade-in.text-center
+        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-wallet-arrow-down.svg'); height:2.5em;")
         span HD Wallet 
         p  Backups 
-      .column.large-3.fade-in.text-center
-        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-flow.svg'); height:100px;")
+      .column.large-3.small-6.fade-in.text-center
+        .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-flow.svg'); height:2.5em;")
         span Convenient Payment
         p  Proposal Flow 
   
@@ -118,27 +126,27 @@ block content
       h5.white.margin-bottom Download Copay for
       .column.large-3.fade-in
         button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-android.svg" width="18").margin-right-less
-          span.gray-medium Android
+          img(src="/images/fi-social-android.svg" width="16").margin-right-less
+          small.gray-medium Android
       .column.large-3.fade-in.text
         button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-apple.svg" width="18").margin-right-less
-          span.gray-medium IOS
+          img(src="/images/fi-social-apple.svg" width="16").margin-right-less
+          small.gray-medium IOS
       .column.large-3.fade-in.text
         button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-windows.svg" width="18").margin-right-less
-          span.gray-medium Windows
+          img(src="/images/fi-social-windows.svg" width="16").margin-right-less
+          small.gray-medium Windows
       .column.large-3.fade-in.text
         button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-chrome.svg" width="18").margin-right-less
-          span.gray-medium Chrome app
+          img(src="/images/fi-social-chrome.svg" width="16").margin-right-less
+          small.gray-medium Chrome app
   footer.padding
-    img(src="/images/logo-copay-footer.svg" width="70")
-    ul.inline-list.right.padding-top-les
+    img(src="/images/logo-copay-footer.svg" width="60")
+    ul.inline-list.right
       li
         a.menu-item.small.white(href="") Stats
       li
-        a.menu-item.small.white(href="") Help & Support 
+        a.menu-item.small.white(href="") Help 
       li
         a.menu-item.small.white(href="") FAQ
       li
