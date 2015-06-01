@@ -4,36 +4,8 @@ block title
   title Copay – BitPay's Open Source Multisignature Bitcoin Wallet
 
 block content
-  .bg-dark(role="navigation")
-    .column.small-1
-      a(href="/" title="Home").logo.margin-top
-
-    .column.small-11.show-for-large-up
-      ul.inline-list.right.padding-top-less.medium-padding-top
-        li
-          a.menu-item.small.white(href="") Stats
-        li
-          a.menu-item.small.white(href="") Help & Support 
-        li
-          a.menu-item.small.white(href="") FAQ
-        li
-          a.menu-item.small.white(href="") View the Code  
-          
-    .column.small-3.hide-for-large-up.margin-top.right
-      a(href="javascript:;").right-off-canvas-toggle.menu-icon
-        span
-          
-    aside.right-off-canvas-menu
-      ul.no-bullet.padding-left.padding-top-less
-        li
-          a.menu-item.small.white(href="") Stats
-        li
-          a.menu-item.small.white(href="") Help & Support 
-        li
-          a.menu-item.small.white(href="") FAQ
-        li
-          a.menu-item.small.white(href="") View the Code  
-          
+  .bg-dark
+    include _includes/main-menu.jade
           
     .row.section
       .column.large-10.large-offset-1.text-center
@@ -136,15 +108,7 @@ block content
         button.white.btn.btn-gray-medium-border.expand.large
           img(src="/images/fi-social-chrome.svg" width="16").margin-right-less
           small.gray-medium Chrome app
-  footer.padding
-    img(src="/images/logo-copay-footer.svg" width="60")
-    ul.inline-list.right
-      li
-        a.menu-item.small.white(href="") Stats
-      li
-        a.menu-item.small.white(href="") Help 
-      li
-        a.menu-item.small.white(href="") FAQ
-      li
-        a.menu-item.small.white(href="") View the Code 
+  footer
+    include _includes/main-menu.jade
+    
     
