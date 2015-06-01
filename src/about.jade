@@ -4,50 +4,21 @@ block title
   title About Copay
   
 block content
-  .bg-dark(role="navigation")
-    .column.small-1
-      a(href="/" title="About").logo.margin-top
-      
-    .column.small-11.show-for-large-up
-      ul.inline-list.right.padding-top-less.medium-padding-top
-        li
-          a.menu-item.small.white(href="") Stats
-        li
-          a.menu-item.small.white(href="") Help & Support 
-        li
-          a.menu-item.small.white(href="") FAQ
-        li
-          a.menu-item.small.white(href="") View the Code  
-          
-    .column.small-3.hide-for-large-up.margin-top.right
-      a(href="javascript:;").right-off-canvas-toggle.menu-icon
-        span
-          
-          
-    aside.right-off-canvas-menu
-      ul.no-bullet.padding-left.padding-top-less
-        li
-          a.menu-item.small.white(href="") Stats
-        li
-          a.menu-item.small.white(href="") Help & Support 
-        li
-          a.menu-item.small.white(href="") FAQ
-        li
-          a.menu-item.small.white(href="") View the Code  
+  .bg-dark
+    include _includes/main-menu.jade
                       
-                      
-    .row.section
-      .column.large-10.large-offset-1.text-center
-          h1.white.fade-in We live on bitcoin. This is our wallet.
-      .column.large-10.large-offset-1.text-center
-          h3.white.medium-margin-top-less.medium-8.medium-offset-2.fade-in.delay-2 Copay, the open source, multisignature bitcoin wallet from BitPay.
-          .margin-top-less.fade-in.delay-4
-          br
-      .column.large-12.fade-in.delay-6.text-left-align
-          h4.white.fade-in When we realized that we needed a more secure way to hold bitcoin, we decided to build our own.
-          h5.white.fade-in Many of our own team members live on bitcoin, and we knew we needed to make wallet security that would work for full-time bitcoin users. With that in mind, we created Copay, one of the first projects to bring the security and shareability of multisignature wallets together in a flexible finance tool for individuals and groups.
-          h5.white.fade-in From Copay's earliest days, we've been 100% open source, working with an international community of developers to build a wallet users could control – and secure – themselves. Now it's out of beta, and we're ready to share version 1.0.
-          br
-          .margin-top-less.fade-in.delay-4.text-center
-            h4.white.fade-in.text-center Take control. Start using a bitcoin wallet made by and for bitcoiners.
-            a(href="#").white.btn.btn-white-border.old.margin-left-less.btn-margin Download Copay
+  .row.section
+    .column.large-10.large-offset-1.text-center
+        h1.white.fade-in We live on bitcoin. This is our wallet.
+    .column.large-10.large-offset-1.text-center
+        h3.white.medium-margin-top-less.medium-8.medium-offset-2.fade-in.delay-2 Copay, the open source, multisignature bitcoin wallet from BitPay.
+        .margin-top-less.fade-in.delay-4
+        br
+    .column.large-12.fade-in.delay-6.text-left-align
+        h4.white.fade-in When we realized that we needed a more secure way to hold bitcoin, we decided to build our own.
+        h5.white.fade-in Many of our own team members live on bitcoin, and we knew we needed to make wallet security that would work for full-time bitcoin users. With that in mind, we created Copay, one of the first projects to bring the security and shareability of multisignature wallets together in a flexible finance tool for individuals and groups.
+        h5.white.fade-in From Copay's earliest days, we've been 100% open source, working with an international community of developers to build a wallet users could control – and secure – themselves. Now it's out of beta, and we're ready to share version 1.0.
+        br
+        .margin-top-less.fade-in.delay-4.text-center
+          h4.white.fade-in.text-center Take control. Start using a bitcoin wallet made by and for bitcoiners.
+          a(href="#").white.btn.btn-white-border.old.margin-left-less.btn-margin Download Copay

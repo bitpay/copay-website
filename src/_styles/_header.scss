@@ -10,7 +10,7 @@
   @media #{$medium-up} {
     margin-bottom: 1.4rem;
   }
-  .white-header & {
+  footer & {
     background-image: url('../images/copay-logo-dark.svg');
   }
 }
@@ -26,6 +26,7 @@
     color: $white;
     text-decoration: none;
   }
+
   .white-header &,
   .right-off-canvas-menu & {
     @extend .white;
