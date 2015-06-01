@@ -58,5 +58,13 @@ footer {
     }
     }
   }
+}
+
+button.download {
+  width: 230px;
+  @media #{$xlarge-up} {
+    float: left;
+    margin-right: 2.4em;
+  }
 
 }
