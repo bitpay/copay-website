@@ -20,9 +20,7 @@
 // for the bottom centered border
 .header__bottom-border,
 .header__bottom-border-left,
-.header__bottom-border__large-left,
-.header__bottom-border-right,
-.header__bottom-border__large-right {
+.header__bottom-border__large-left {
   position: relative;
   margin-bottom: 3rem;
   &:after {
@@ -47,17 +45,6 @@
   left: calc(50% - 2rem);
   @media #{$large-up} {
     left: 0;
-  }
-}
-
-.header__bottom-border-right:after {
-  right: 0;
-}
-
-.header__bottom-border__large-right:after {
-  right: calc(50% - 2rem);
-  @media #{$large-up} {
-    right: 0;
   }
 }
 
