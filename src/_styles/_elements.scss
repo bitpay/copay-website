@@ -60,8 +60,9 @@ footer {
   }
 }
 
-button.download {
+a.download {
   width: 230px;
+  margin-bottom: 2em;
   @media #{$xlarge-up} {
     float: left;
     margin-right: 2.4em;

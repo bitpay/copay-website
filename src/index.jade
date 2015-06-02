@@ -5,34 +5,7 @@ block title
 
 block content
   .tinted-image.background-cover(role="navigation")
-    .column.small-1
-      a(href="/" title="Home").logo.margin-top
-
-    .column.small-11.show-for-large-up
-      ul.inline-list.right.padding-top-less.medium-padding-top
-        li
-          a.menu-item.small.white(href="") Stats
-        li
-          a.menu-item.small.white(href="") Help & Support 
-        li
-          a.menu-item.small.white(href="") FAQ
-        li
-          a.menu-item.small.white(href="") View the Code  
-          
-    .column.small-3.hide-for-large-up.margin-top.right
-      a(href="javascript:;").right-off-canvas-toggle.menu-icon
-        span
-          
-    aside.right-off-canvas-menu
-      ul.no-bullet.padding-left.padding-top-less
-        li
-          a.menu-item.small.white(href="") Stats
-        li
-          a.menu-item.small.white(href="") Help & Support 
-        li
-          a.menu-item.small.white(href="") FAQ
-        li
-          a.menu-item.small.white(href="") View the Code  
+    include _includes/main-menu.jade
           
           
     .row.section
@@ -46,7 +19,7 @@ block content
           h4.white.fade-in When we realized that we needed a more secure way to hold bitcoin, we decided to build our own.
           .margin-top-less.fade-in.delay-4.text-center
             h4.white.fade-in.text-center Take control. Start using a bitcoin wallet made by and for bitcoiners.
-            a(href="#").white.btn.btn-white-border.old.margin-left-less.btn-margin Download Copay
+            a(href="#download").white.btn.btn-white-border.old.margin-left-less.btn-margin View in Store
       
   .section
     .row
@@ -117,29 +90,29 @@ block content
         span Convenient Payment
         p  Proposal Flow 
   
-  .bg-dark.text-center.padding
+  #download.bg-dark.text-center.padding
     h5.white.margin-bottom Download Copay for
     .row
       div
-        button.white.btn.btn-gray-medium-border.download
+        a(href="https://itunes.apple.com/us/app/copay/id951330296" target="blank").white.btn.btn-gray-medium-border.download
           .icon.left.h2.background-contain(style="background-image: url('/images/icon-applestore.svg'); width: 2em; height: 1em;")
           .text-left.line-height-less
             small.gray-medium Get it on
             h6.white.margin-none App Store
       div
-        button.white.btn.btn-gray-medium-border.download
+        a(href="https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en" target="blank").white.btn.btn-gray-medium-border.download
           .icon.left.h2.background-contain(style="background-image: url('/images/icon-playstore.svg'); width: 2em; height: 1em;")
           .text-left.line-height-less
             small.gray-medium Get it for
             h6.white.margin-none Google Play  
       div
-        button.white.btn.btn-gray-medium-border.download
+        a(href="http://www.windowsphone.com/en-us/store/app/copay-wallet/4372479b-a064-4d18-8bd3-74a3bdb81c3a" target="blank").white.btn.btn-gray-medium-border.download
           .icon.left.h2.background-contain(style="background-image: url('/images/icon-winstore.svg'); width: 2em; height: 1em;")
           .text-left.line-height-less
             small.gray-medium Download from
             h6.white.margin-none Windows Store      
       div
-        button.white.btn.btn-gray-medium-border.download
+        a(href="https://chrome.google.com/webstore/detail/copay/cnidaodnidkbaplmghlelgikaiejfhja?hl=en" target="blank").white.btn.btn-gray-medium-border.download
           .icon.left.h2.background-contain(style="background-image: url('/images/icon-chrome-app.svg'); width: 2em; height: 1em;")
           .text-left.line-height-less
             small.gray-medium Download From
@@ -153,8 +126,6 @@ block content
         ul.inline-list.right.padding-top-less.medium-padding-top
           li
             a.menu-item.small.white(href="") Stats
-          li
-            a.menu-item.small.white(href="") Help & Support 
           li
             a.menu-item.small.white(href="./FAQ") FAQ
           li
