@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 6 Copy 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="67.5932901%" y1="6.33430268%" x2="67.5932884%" y2="79.1251126%" id="linearGradient-1">
+            <stop stop-color="#39C6EF" offset="0%"></stop>
+            <stop stop-color="#1C7391" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M34.0851389,16.7694238 L15.4935522,16.7694238 L15.4935522,3.23044972 L34.0851389,0.595430556 L34.0851389,16.7694238 L34.0851389,16.7694238 Z M34.0851389,34.6805694 L15.4935522,32.0399175 L15.4935522,17.8452867 L34.0851389,17.8452867 L34.0851389,34.6805694 L34.0851389,34.6805694 Z M14.4267018,16.7694238 L0,16.7694238 L0,5.35626467 L14.4267018,3.34310552 L14.4267018,16.7694238 L14.4267018,16.7694238 Z M14.4267018,31.9317679 L0,29.9174822 L0,17.8452867 L14.4267018,17.8452867 L14.4267018,31.9317679 L14.4267018,31.9317679 Z" id="Fill-6-Copy-9" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

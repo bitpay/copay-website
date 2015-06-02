@@ -4,21 +4,22 @@ block title
   title Copay – BitPay's Open Source Multisignature Bitcoin Wallet
 
 block content
-  .bg-dark
+  .tinted-image.background-cover(role="navigation")
     include _includes/main-menu.jade
+          
           
     .row.section
       .column.large-10.large-offset-1.text-center
-          h1.white.fade-in We live on bitcoin. This is our wallet.
+          h1.white.fade-in.text-shadow We live on bitcoin. This is our wallet.
       .column.large-10.large-offset-1.text-center
-          h3.white.medium-margin-top-less.medium-8.medium-offset-2.fade-in.delay-2 Copay, the open source, multisignature bitcoin wallet from BitPay.
+          h3.white.medium-margin-top-less.medium-8.medium-offset-2.fade-in.delay-2.text-shadow Copay, the open source, multisignature bitcoin wallet from BitPay.
           .margin-top-less.fade-in.delay-4
           br
       .column.large-12.fade-in.delay-6.text-left-align
           h4.white.fade-in When we realized that we needed a more secure way to hold bitcoin, we decided to build our own.
           .margin-top-less.fade-in.delay-4.text-center
             h4.white.fade-in.text-center Take control. Start using a bitcoin wallet made by and for bitcoiners.
-            a(href="#").white.btn.btn-white-border.old.margin-left-less.btn-margin Download Copay
+            a(href="#download").white.btn.btn-white-border.old.margin-left-less.btn-margin View in Store
       
   .section
     .row
@@ -89,26 +90,47 @@ block content
         span Convenient Payment
         p  Proposal Flow 
   
-  .bg-dark.text-center.padding-vertical-more
+  #download.bg-dark.text-center.padding
+    h5.white.margin-bottom Download Copay for
     .row
-      h5.white.margin-bottom Download Copay for
-      .column.large-3.fade-in
-        button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-android.svg" width="16").margin-right-less
-          small.gray-medium Android
-      .column.large-3.fade-in.text
-        button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-apple.svg" width="16").margin-right-less
-          small.gray-medium IOS
-      .column.large-3.fade-in.text
-        button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-windows.svg" width="16").margin-right-less
-          small.gray-medium Windows
-      .column.large-3.fade-in.text
-        button.white.btn.btn-gray-medium-border.expand.large
-          img(src="/images/fi-social-chrome.svg" width="16").margin-right-less
-          small.gray-medium Chrome app
+      div
+        a(href="https://itunes.apple.com/us/app/copay/id951330296" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-applestore.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Get it on
+            h6.white.margin-none App Store
+      div
+        a(href="https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-playstore.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Get it for
+            h6.white.margin-none Google Play  
+      div
+        a(href="http://www.windowsphone.com/en-us/store/app/copay-wallet/4372479b-a064-4d18-8bd3-74a3bdb81c3a" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-winstore.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Download from
+            h6.white.margin-none Windows Store      
+      div
+        a(href="https://chrome.google.com/webstore/detail/copay/cnidaodnidkbaplmghlelgikaiejfhja?hl=en" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-chrome-app.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Download From
+            h6.white.margin-none Chrome App
   footer
-    include _includes/main-menu.jade
+    .row(role="navigation")
+      .column.small-1
+        a(href="/" title="Home").logo.margin-top
+
+      .column.small-11.show-for-large-up
+        ul.inline-list.right.padding-top-less.medium-padding-top
+          li
+            a.menu-item.small.white(href="") Stats
+          li
+            a.menu-item.small.white(href="./FAQ") FAQ
+          li
+            a.menu-item.small.white(href="./about") About
+          li
+            a.menu-item.small.white(href="") View the Code   
     
     
