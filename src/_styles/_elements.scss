@@ -62,15 +62,11 @@ footer {
 
 a.download {
   width: 230px;
-  margin-bottom: 2em;
-  @media #{$xlarge-up} {
-    float: left;
-    margin-right: 2.4em;
-  }
-
+  margin: 1.2em;
 }
 
 .tinted-image {
+  background-color: #2C3E50;
   background: url("../images/banner.jpg");
   background-size: cover;
   background-position: top;
