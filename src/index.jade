@@ -15,7 +15,7 @@ block content
     .bg-gray.border-bottom-gray
       .row.padding-less.text-center
         mixin logos(name, url)
-          a("#{url}" target="blank")
+          a(href="#{url}" target="blank")
             .home-logo.h2.unselectable.grey-hover(style="background-image: url('/images/bw-icons/#{name}.svg'); width: 0.75em; height: 0.75em; margin-right: 0.75em")
         +logos("apple", "https://itunes.apple.com/us/app/copay/id951330296")
         +logos("google", "https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en")
