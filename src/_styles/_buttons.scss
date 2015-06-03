@@ -31,6 +31,18 @@
       background: rgba(255,255,255,0.1);
     }
   }
+  &-green-button {
+    background-color: #50AD9B;
+    border-color: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &-green-border {
+    border-color: #45A290;
+    &:hover {
+      background: #15A085;
+    }
+  }
   @media #{$small-only} {
     padding: 0.75rem 1.125rem;
   }
