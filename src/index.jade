@@ -4,7 +4,7 @@ block title
   title Copay – BitPay's Open Source Multisignature Bitcoin Wallet
 
 block content
-  .tinted-image.background-cover(role="navigation")
+  .tinted-image(role="navigation")
     include _includes/main-menu.jade
     
     .section
@@ -16,6 +16,7 @@ block content
           h3.white.medium-margin-top-less.fade-in.delay-4.text-shadow Secure your bitcoin with the open source, hierarchical-deterministic multisignature bitcoin wallet from BitPay.
           .margin-top-less.fade-in.delay-4
             a(href="#download").uppercase.bold.white.btn.btn-green.btn-margin.margin-top Get Copay
+
       
   .section
     .row
@@ -103,7 +104,29 @@ block content
           .text-left.line-height-less
             small.gray-medium Get the
             h6.white.margin-none Chrome App
+    .row
+      div
+        a(href="https://github.com/bitpay/copay/releases" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-mac-os-x.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Available on
+            h6.white.margin-none Mac OS X
     
+      div
+        a(href="https://github.com/bitpay/copay/releases" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-winstore.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Run it on
+            h6.white.margin-none Windows
+
+      div
+        a(href="https://github.com/bitpay/copay/releases" target="blank").white.btn.btn-gray-medium-border.download
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-linux.svg'); width: 2em; height: 1em;")
+          .text-left.line-height-less
+            small.gray-medium Run it on
+            h6.white.margin-none Linux 
+                    
+                    
     .margin-top-less
       a.border-bottom-light.white(href="https://github.com/bitpay/copay/releases") Download the latest source code from GitHub &rsaquo;
   
