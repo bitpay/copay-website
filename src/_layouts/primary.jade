@@ -11,25 +11,25 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
     block title
-      title BitPay
+      title Copay – Secure, Shared Bitcoin Wallet
 
     block meta
-      meta(name='description', content='Bitcoin payments, deposited to your bank account. Offer your customers the world’s fastest and safest payment option.')
+      meta(name='description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.')
 
       // Twitter Card data
       meta(name='twitter:card', content='summary')
       meta(name='twitter:site', content='@BitPay')
-      meta(name='twitter:title', content='BitPay – Accept Bitcoin')
-      meta(name='twitter:description', content='Bitcoin payments, deposited to your bank account. Offer your customers the world’s fastest and safest payment option.')
-      meta(name='twitter:image', content='/images/social/bitpay-avatar-1200.jpg')
+      meta(name='twitter:title', content='Copay – Secure, Shared Bitcoin Wallet')
+      meta(name='twitter:description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.')
+      meta(name='twitter:image', content='/images/social/card.jpg')
 
       // Open Graph data (Facebook and Reddit)
-      meta(property='og:title', content='BitPay – Accept Bitcoin')
+      meta(property='og:title', content='Copay – Secure, Shared Bitcoin Wallet')
       meta(property='og:type', content='article')
-      meta(property='og:url', content='https://bitpay.com/')
-      meta(property='og:image', content='/images/social/bitpay-avatar-1200.jpg')
-      meta(property='og:description', content='Bitcoin payments, deposited to your bank account. Offer your customers the world’s fastest and safest payment option.')
-      meta(property='og:site_name', content='BitPay')
+      meta(property='og:url', content='https://Copay.io/')
+      meta(property='og:image', content='/images/social/avatar.jpg')
+      meta(property='og:description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.')
+      meta(property='og:site_name', content='Copay.io')
 
     // Add to homescreen for Chrome on Android
     meta(name='mobile-web-app-capable', content='yes')
@@ -67,8 +67,10 @@ html(lang='en')
     
     block scripts
       +jademin('/scripts/main.min.js')
-        script(src='/jquery/dist/jquery.js')
+        script(src='/foundation/js/vendor/jquery.js')
+        script(src='/foundation/js/vendor/modernizr.js')
         script(src='/foundation/js/foundation/foundation.js')
         script(src='/foundation/js/foundation/foundation.offcanvas.js')
+        script(src='/foundation/js/foundation/foundation.tooltip.js')
         script(src='/instantclick/instantclick.js')
         script(src='/_scripts/init.js')
