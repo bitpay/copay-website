@@ -6,7 +6,6 @@ block title
 block content
   .tinted-image(role="navigation")
     include _includes/main-menu.jade
-    
     .section
       .row
         .column.large-10.large-offset-1.text-center
@@ -16,7 +15,19 @@ block content
           h3.white.medium-margin-top-less.fade-in.delay-4.text-shadow Secure your bitcoin with the open source, hierarchical-deterministic multisignature bitcoin wallet from BitPay.
           .margin-top-less.fade-in.delay-4
             a(href="#download").uppercase.bold.white.btn.btn-green.btn-margin.margin-top Get Copay
-
+    .bg-gray.border-bottom-gray
+      .row.padding-less.text-center
+        mixin logos(name, url)
+          a("#{url}" target="blank")
+            .home-logo.h2.unselectable.grey-hover(style="background-image: url('/images/bw-icons/#{name}.svg'); width: 0.75em; height: 0.75em; margin-right: 0.75em")
+        +logos("apple", "https://itunes.apple.com/us/app/copay/id951330296")
+        +logos("google", "https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en")
+        +logos("windows", "http://www.windowsphone.com/en-us/store/app/copay-wallet/4372479b-a064-4d18-8bd3-74a3bdb81c3a")
+        +logos("chrome", "https://chrome.google.com/webstore/detail/copay/cnidaodnidkbaplmghlelgikaiejfhja?hl=en")
+        +logos("osx","https://github.com/bitpay/copay/releases")
+        +logos("microsoft", "https://github.com/bitpay/copay/releases")
+        +logos("linux", "https://github.com/bitpay/copay/releases")
+      
       
   .section
     .row
@@ -114,7 +125,7 @@ block content
     
       div
         a(href="https://github.com/bitpay/copay/releases" target="blank").white.btn.btn-gray-medium-border.download
-          .icon.left.h2.background-contain(style="background-image: url('/images/icon-winstore.svg'); width: 2em; height: 1em;")
+          .icon.left.h2.background-contain(style="background-image: url('/images/icon-microsoft.svg'); width: 2em; height: 1em;")
           .text-left.line-height-less
             small.gray-medium Run it on
             h6.white.margin-none Windows
