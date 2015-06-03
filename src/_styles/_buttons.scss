@@ -47,3 +47,12 @@
 .btn-margin {
   margin: 0.5rem 1rem 0.5rem 0;
 }
+
+.grey-hover {
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 1;
+  }
+}
