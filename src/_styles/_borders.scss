@@ -43,9 +43,7 @@
 
 .header__bottom-border__large-left:after {
   left: calc(50% - 2rem);
-  @media #{$large-up} {
-    left: 0;
-  }
+  left: 0;
 }
 
 .body-text__bottom-border {
