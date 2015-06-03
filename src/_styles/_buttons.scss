@@ -13,14 +13,14 @@
   }
   &-white-border {
     background: rgba(255,255,255,0.05);
-    border: 1px solid $white !important;
+    border: 1px solid $white;
     &:hover {
       background: rgba(255,255,255,0.1);
     }
   }
   &-gray-medium-border {
     background: rgba(255,255,255,0.05);
-    border: 1px solid $gray-medium !important;
+    border: 1px solid $gray-medium;
     &:hover {;
       background: rgba(255,255,255,0.1);
     }
@@ -31,14 +31,10 @@
       background: rgba(255,255,255,0.1);
     }
   }
-  &-green-button {
-    background-color: #50AD9B;
-    border-color: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  &-green-border {
-    border-color: #45A290;
+  &-green {
+    background: #1ABC9C;
+    border: 1px solid darken(#1ABC9C, 5%);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.5);
     &:hover {
       background: #15A085;
     }
