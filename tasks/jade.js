@@ -11,7 +11,7 @@ var async = require('async');
 var uglifyJS = require('uglify-js');
 var jademinSrcs = {};
 
-gulp.task('jade', function() {
+gulp.task('jade:prod', function() {
   return jade();
 });
 
