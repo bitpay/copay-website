@@ -65,6 +65,7 @@ a.download {
   margin: 0.7em;
 }
 
+
 a.lost-link{
   color:#748598;
   padding-bottom: 4px;
@@ -78,3 +79,65 @@ a:hover.lost-link{
   width: 250px;
   padding-bottom: 2em;
 }
+
+/*!
+ Elements for the animations
+ */
+
+ .relative {
+ position:relative
+ }
+
+ .user-checked {
+  width: 39px;
+  height: 39px;  
+  position: absolute;
+ }
+
+  .user-checked-phone {
+  width: 23px;
+  height: 29px;  
+  position: absolute;
+ }
+
+   .checked-screen {
+  position: absolute;
+  width: 138px;
+  height: 408.66px; 
+ }
+
+ .check-position1 {
+  left: 6em;
+  top: 4em;
+ }
+
+  .check-position2 {
+  left: 100px;
+  top: 100px;
+ }
+
+  .check-position3 {
+  left: 10%;
+  top: 10%;
+ }
+
+  .check-phone-position1 {
+  right: 2em;
+  top: 4em;
+ }
+
+  .check-phone-position2 {
+  right: 2em;
+  top: 4em;
+ }
+
+  .check-phone-position3 {
+  right: 2em;
+  top: 4em;
+ }
+
+ .checked-screen-position {
+  right: 4em;
+  bottom: 1em;
+  }
+
