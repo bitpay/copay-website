@@ -88,6 +88,8 @@ a:hover.lost-link{
  position:relative
  }
 
+ /* Classes for first animation */
+
   .side-phone {
   width: 181px;
   height: 531px;  
@@ -171,3 +173,29 @@ a:hover.lost-link{
   right: 1.6em;
   top: 1.64em;
  }
+
+
+/* Classes for second animation */
+
+.base-phone{
+  position: absolute;
+  left: 0;
+  top: 8em;
+ }
+
+  .yellow-wallet, .purple-wallet{
+  position: absolute;
+ }
+
+ .yellow-wallet{
+  position: absolute;
+  left: 0;
+  top: 4em;
+ }
+
+ .purple-wallet{
+  position: absolute;
+  left: 0;
+  top: 0;
+ }
+

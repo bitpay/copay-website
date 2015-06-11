@@ -54,13 +54,21 @@ block content
         
   .section.bg-gray
     .row
-      .column.large-7
+      .column.large-7.hide-for-large-up
         .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:15em;")
+      .column.large-7.show-for-large-up.red
+          //- Animation starts
+          img.base-phone.fade-in(src="/images/base-phone.png") 
+          img.yellow-wallet.delay-3.fade-in-up(src="/images/yellow-wallet.png") 
+          img.purple-wallet.delay-6.fade-in-up(src="/images/purple-wallet.png") 
+          //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Multiple Wallets,#[br] One App
         h5.margin-bottom-less No more tedious address management.
         p The Copay app securely stores multiple, distinct bitcoin wallets, allowing both business and privacy-conscious users to keep funds carefully separated.
         p Manage personal, business, and testnet wallets easily, all without leaving the app. Copay uses hierarchical-deterministic (HD) wallets, allowing for secure in-app wallet generation and backup.
+
+
 
         
   .section
