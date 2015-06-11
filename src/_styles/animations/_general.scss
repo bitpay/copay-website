@@ -88,3 +88,50 @@ $animation-distance: 1rem;
     transform: scale(1);
   }
 }
+
+
+/* Classes for testnet animation */
+
+p.text-anim{
+  position: absolute;
+  left: 10em;
+  top: 21em;
+  color: #5B6F84; 
+  font-family: "ubuntu";
+  font-size:0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 9em;
+  animation: type 4s steps(60, end); 
+}
+
+p.text-anim:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+p.text-anim a{
+  color: lime;
+  text-decoration: none;
+}
+
+span.blue-stick{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+.blue-stick{
+  color: blue; 
+} 

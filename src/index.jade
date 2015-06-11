@@ -56,7 +56,7 @@ block content
     .row
       .column.large-7.hide-for-large-up
         .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:15em;")
-      .column.large-7.show-for-large-up.red
+      .column.large-7.show-for-large-up
           //- Animation starts
           img.base-phone.fade-in(src="/images/base-phone.png") 
           img.yellow-wallet.delay-3.fade-in-up(src="/images/yellow-wallet.png") 
@@ -86,8 +86,13 @@ block content
 
   .section.bg-gray
     .row
-      .column.large-7
+      .column.large-7.hide-for-large-up
         .icon.h2.background-contain(style="background-image: url('/images/livenet-testnet.png'); height:15em;")
+      .column.large-7.show-for-large-up
+          //- Animation starts
+          img.livenet-testnet.fade-in(src="/images/livenet-testnet-anim.png") 
+          p.text-anim Conference Demo#[span.blue-stick|]
+          //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Testnet Support for Developers
         h5.margin-bottom-less The first bitcoin wallet to bring testnet support to both iOS and Windows Phone. 
