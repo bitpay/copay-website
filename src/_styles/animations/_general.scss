@@ -1,4 +1,4 @@
-@for $i from 1 through 10 {
+@for $i from 1 through 24 {
   .delay-#{$i} {
     animation-delay: $i * 300ms;
   }

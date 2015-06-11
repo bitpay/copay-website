@@ -88,52 +88,75 @@ a:hover.lost-link{
  position:relative
  }
 
- .user-checked {
+  .side-phone {
+  width: 181px;
+  height: 531px;  
+  position: absolute;
+  right: 1em;
+  top: 0;
+ }
+
+  .user-checked {
   width: 39px;
   height: 39px;  
   position: absolute;
  }
 
+ .user-face {
+  width: 85px;
+  height: 85px;  
+  position: absolute;
+
+ }
+
   .user-checked-phone {
-  width: 23px;
-  height: 29px;  
+  height: 14px;  
   position: absolute;
  }
 
-   .checked-screen {
-  position: absolute;
-  width: 138px;
-  height: 408.66px; 
+ .user-face-position1 {
+   right: 10em;
+   top: 3.5em;
+  }
+
+  .check-position1 {
+   right: 9.5em;
+   top: 3.5em;
  }
 
- .check-position1 {
-  left: 6em;
-  top: 4em;
+.check-phone-position1 {
+  right: 1.7em;
+  top: 8.5em;
  }
 
-  .check-position2 {
-  left: 100px;
-  top: 100px;
+ .user-face-position2 {
+   right: 10em;
+   top: 7em;
+  }
+
+   .check-position2 {
+   right: 9.5em;
+   top: 7em;
  }
+
+ .check-phone-position2 {
+  right: 1.7em;
+  top: 9.5em;
+ }
+
+   .user-face-position3 {
+   right: 10em;
+   top: 10.5em;
+  }
 
   .check-position3 {
-  left: 10%;
-  top: 10%;
+   right: 9.5em;
+   top: 10.5em;
  }
 
-  .check-phone-position1 {
-  right: 2em;
-  top: 4em;
- }
-
-  .check-phone-position2 {
-  right: 2em;
-  top: 4em;
- }
-
-  .check-phone-position3 {
-  right: 2em;
-  top: 4em;
+ .check-phone-position3 {
+  right: 1.7em;
+  top: 10.4em;
  }
 
  .checked-screen-position {
@@ -141,3 +164,10 @@ a:hover.lost-link{
   bottom: 1em;
   }
 
+  .phone-green-screen {
+  width: 158.5px;
+  height: 423px;  
+  position: absolute;
+  right: 1.6em;
+  top: 1.64em;
+ }

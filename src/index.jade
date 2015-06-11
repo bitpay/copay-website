@@ -29,22 +29,28 @@ block content
   .section
     .row
       .column.large-7.hide-for-large-up
-        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:15em;")
+        .icon.h2.background-contain(style="background-image: url('/images/faces-cell-complete.png'); height:15em;")
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Secure, Shared Wallets
         h5.margin-bottom Copay is a true bitcoin wallet, not an account service. Secure your personal funds with multiple signatures, or just one.
         p Take security into your own hands and avoid trusting third parties with your savings. Like a joint-checking account, your Copay wallet can have multiple users. To send money, the group approves each transaction.
         p Manage shared funds with friends and coworkers. Share a wallet with your child and introduce them to bitcoin. Copay makes sharing a wallet simple and secure.
       .column.large-7.show-for-large-up
-        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:15em;")
-          img.user-checked.check-position1.delay-1.fade-in-right(src="/images/user-checked.svg") 
-          img.user-checked.check-position2.delay-3.fade-in-right(src="/images/user-checked.svg") 
-          img.user-checked.check-position3.delay-5.fade-in-right(src="/images/user-checked.svg") 
-          img.user-checked-phone.check-phone-position1.delay-2.fade-in-right(src="/images/user-checked.svg")
-          img.user-checked-phone.check-phone-position2.delay-4.fade-in-right(src="/images/user-checked.svg")
-          img.user-checked-phone.check-phone-position3.delay-6.fade-in-right(src="/images/user-checked.svg")
-          img.checked-screen.checked-screen-position.delay-10.fade-in(src="/images/side-phone-screen2.png")
-    
+        .icon.h2.background-contain
+
+          //- Animation starts
+          img.side-phone.fade-in-right(src="/images/faces-cell.png") 
+          img.user-face.user-face-position1.delay-1.fade-in-right(src="/images/user1.svg") 
+          img.user-face.user-face-position2.delay-1.fade-in-right(src="/images/user2.svg") 
+          img.user-face.user-face-position3.delay-1.fade-in-right(src="/images/user3.svg") 
+          img.user-checked.check-position1.delay-4.fade-in(src="/images/user-checked.svg") 
+          img.user-checked.check-position2.delay-8.fade-in(src="/images/user-checked.svg") 
+          img.user-checked.check-position3.delay-12.fade-in(src="/images/user-checked.svg") 
+          img.user-checked-phone.check-phone-position1.delay-6.fade-in(src="/images/user-checked-phone.svg")
+          img.user-checked-phone.check-phone-position2.delay-10.fade-in(src="/images/user-checked-phone.svg")
+          img.user-checked-phone.check-phone-position3.delay-14.fade-in(src="/images/user-checked-phone.svg")
+          img.phone-green-screen.delay-16.fade-in(src="/images/side-phone-screen2.png")
+          //- Animation ends
         
   .section.bg-gray
     .row
