@@ -64,3 +64,17 @@ a.download {
   width: 230px;
   margin: 0.7em;
 }
+
+a.lost-link{
+  color:#748598;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #DEDFE1;
+}
+a:hover.lost-link{
+  border-bottom: 2px solid #748598;
+}
+
+.lost-size {
+  width: 250px;
+  padding-bottom: 2em;
+}
