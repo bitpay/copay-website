@@ -1,11 +1,6 @@
 extends _layouts/primary
 
 
-<script>
- new WOW().init();
-</script>
-
-
 block content
   div(role="navigation" style="background: #30545A url('/images/banner.jpg'); background-size: cover; background-position: top;")
     include _includes/main-menu.jade
@@ -45,17 +40,17 @@ block content
         .icon.h2.background-contain
 
           //- Animation starts
-          img.side-phone.fade-in-right(src="/images/faces-cell.png") 
-          img.user-face.user-face-position1.delay-1.fade-in-right(src="/images/user1.svg") 
-          img.user-face.user-face-position2.delay-1.fade-in-right(src="/images/user2.svg") 
-          img.user-face.user-face-position3.delay-1.fade-in-right(src="/images/user3.svg") 
-          img.user-checked.check-position1.delay-4.fade-in(src="/images/user-checked.svg") 
-          img.user-checked.check-position2.delay-8.fade-in(src="/images/user-checked.svg") 
-          img.user-checked.check-position3.delay-12.fade-in(src="/images/user-checked.svg") 
-          img.user-checked-phone.check-phone-position1.delay-6.fade-in(src="/images/user-checked-phone.svg")
-          img.user-checked-phone.check-phone-position2.delay-10.fade-in(src="/images/user-checked-phone.svg")
-          img.user-checked-phone.check-phone-position3.delay-14.fade-in(src="/images/user-checked-phone.svg")
-          img.phone-green-screen.delay-16.fade-in(src="/images/side-phone-screen2.png")
+          img.side-phone.fade-in-right.wow.animated(src="/images/faces-cell.png") 
+          img.user-face.user-face-position1.delay-1.fade-in-right.wow.animated(src="/images/user1.svg") 
+          img.user-face.user-face-position2.delay-1.fade-in-right.wow.animated(src="/images/user2.svg") 
+          img.user-face.user-face-position3.delay-1.fade-in-right.wow.animated(src="/images/user3.svg") 
+          img.user-checked.check-position1.delay-4.fade-in.wow.animated(src="/images/user-checked.svg") 
+          img.user-checked.check-position2.delay-8.fade-in.wow.animated(src="/images/user-checked.svg") 
+          img.user-checked.check-position3.delay-12.fade-in.wow.animated(src="/images/user-checked.svg") 
+          img.user-checked-phone.check-phone-position1.delay-6.fade-in.wow.animated(src="/images/user-checked-phone.svg")
+          img.user-checked-phone.check-phone-position2.delay-10.fade-in.wow.animated(src="/images/user-checked-phone.svg")
+          img.user-checked-phone.check-phone-position3.delay-14.fade-in.wow.animated(src="/images/user-checked-phone.svg")
+          img.phone-green-screen.delay-16.fade-in.wow.animated(src="/images/side-phone-screen2.png")
           //- Animation ends
         
   .section.bg-gray
@@ -64,9 +59,9 @@ block content
         .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:15em;")
       .column.large-7.show-for-large-up
           //- Animation starts
-          img.base-phone.fade-in(src="/images/base-phone.png") 
-          img.yellow-wallet.delay-3.fade-in-up(src="/images/yellow-wallet.png") 
-          img.purple-wallet.delay-6.fade-in-up(src="/images/purple-wallet.png") 
+          img.base-phone.fade-in.wow.animated(src="/images/base-phone.png") 
+          img.yellow-wallet.delay-3.fade-in-up.wow.animated(src="/images/yellow-wallet.png") 
+          img.purple-wallet.delay-6.fade-in-up.wow.animated(src="/images/purple-wallet.png") 
           //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Multiple Wallets,#[br] One App
@@ -88,8 +83,8 @@ block content
         p When you send money to a Payment Protocol-enabled merchant, Copay securely verifies that your payment will go to the right place.
       .column.large-7.show-for-large-up
         .icon.h2.background-contain
-          img.base-map.fade-in(src="/images/dotted-map.png") 
-          img.secpayphone.fade-in.delay-3(src="/images/secure-payment-phone.png") 
+          img.base-map.fade-in.wow.animated(src="/images/dotted-map.png") 
+          img.secpayphone.fade-in.delay-3.wow.animated(src="/images/secure-payment-phone.png") 
 
 
   .section.bg-gray.overflow
@@ -99,8 +94,8 @@ block content
       .column.large-7.show-for-large-up
           //- Animation starts
           img.base-map.fade-in(src="/images/livenet-testnet-base.png") 
-          img.secpayphone.fade-in.delay-3.wow(src="/images/livenet-testnet-text.png") 
-          img.secpayphone.fade-in.delay-6.wow(src="/images/livenet-testnet-switch.png") 
+          img.secpayphone.fade-in.delay-3.wow.animated(src="/images/livenet-testnet-text.png") 
+          img.secpayphone.fade-in.delay-6.wow.animated(src="/images/livenet-testnet-switch.png") 
           //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Testnet Support for Developers
@@ -124,8 +119,8 @@ block content
           section.overflow
             div#open-source
             //- Animation starts
-            img.base-map.fade-in.wow(src="/images/code-phone-base.png") 
-            img.secpayphone.fade-in.delay-3.wow(src="/images/code-trust.png") 
+            img.base-map.fade-in.wow.animated(src="/images/code-phone-base.png") 
+            img.secpayphone.fade-in.delay-3.wow.animated(src="/images/code-trust.png") 
             //- Animation ends
           <!-- OpenSOurce ends -->
   
