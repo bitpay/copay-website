@@ -65,6 +65,7 @@ a.download {
   margin: 0.7em;
 }
 
+
 a.lost-link{
   color:#748598;
   padding-bottom: 4px;
@@ -78,3 +79,161 @@ a:hover.lost-link{
   width: 250px;
   padding-bottom: 2em;
 }
+
+/*!
+ Elements for the animations
+ */
+
+ .relative {
+ position:relative
+ }
+
+ .animated {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+ /* Classes for first animation */
+
+  .side-phone {
+  width: 181px;
+  height: 531px;  
+  position: absolute;
+  right: 1em;
+  top: 0;
+ }
+
+  .user-checked {
+  width: 39px;
+  height: 39px;  
+  position: absolute;
+ }
+
+ .user-face {
+  width: 85px;
+  height: 85px;  
+  position: absolute;
+
+ }
+
+  .user-checked-phone {
+  height: 14px;  
+  position: absolute;
+ }
+
+ .user-face-position1 {
+   right: 10em;
+   top: 3.5em;
+  }
+
+  .check-position1 {
+   right: 9.5em;
+   top: 3.5em;
+ }
+
+.check-phone-position1 {
+  right: 1.7em;
+  top: 8.5em;
+ }
+
+ .user-face-position2 {
+   right: 10em;
+   top: 7em;
+  }
+
+   .check-position2 {
+   right: 9.5em;
+   top: 7em;
+ }
+
+ .check-phone-position2 {
+  right: 1.7em;
+  top: 9.5em;
+ }
+
+   .user-face-position3 {
+   right: 10em;
+   top: 10.5em;
+  }
+
+  .check-position3 {
+   right: 9.5em;
+   top: 10.5em;
+ }
+
+ .check-phone-position3 {
+  right: 1.7em;
+  top: 10.4em;
+ }
+
+ .checked-screen-position {
+  right: 4em;
+  bottom: 1em;
+  }
+
+  .phone-green-screen {
+  width: 158.5px;
+  height: 423px;  
+  position: absolute;
+  right: 1.6em;
+  top: 1.64em;
+ }
+
+
+/* Classes for the second animation */
+
+.base-phone{
+  position: absolute;
+  left: 0;
+  top: 8em;
+ }
+
+  .yellow-wallet, .purple-wallet{
+  position: absolute;
+ }
+
+ .yellow-wallet{
+  position: absolute;
+  left: 0;
+  top: 4em;
+ }
+
+ .purple-wallet{
+  position: absolute;
+  left: 0;
+  top: 0;
+ }
+ 
+ /* Classes for the third animation */
+
+.base-map ,.secpayphone ,.base-tl, .tl-layer1, .tl-layer2{
+  position: absolute;
+  left: 0;
+  top: 0;
+ }
+
+ 
+
+ /* Classes for the fourth animation */
+
+.tl{
+ width: 1em;
+ background-color: red;
+ }
+
+    /* Classes for the fifth animation */
+
+.code-trust-base{
+  display: block;
+  border-bottom: 10px red solid;
+   position: absolute;
+  left: 1em;
+  top: 1em;
+   }
+
+ .code-trust{
+  display: block;
+  position: absolute;
+  overflow: hidden;
+   }
+
