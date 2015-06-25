@@ -7,6 +7,15 @@
   });
   InstantClick.init();
 
+  var wow = new window.WOW({
+    'animateClass': 'animated',
+    'offset': 100,
+    // 'callback': function(box) {
+    //   console.log('WOW: animating <' + box.tagName.toLowerCase() + '>');
+    // }
+  });
+  wow.init();
+
   function initSmoothScroll(){
     //smooth scrolling on clicks
     jQuery('a[href*=#]').on('click', function(e) {
