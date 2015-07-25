@@ -1,5 +1,6 @@
 extends _layouts/primary
 
+
 block content
   div(role="navigation" style="background: #30545A url('/images/banner.jpg'); background-size: cover; background-position: top;")
     include _includes/main-menu.jade
@@ -29,24 +30,46 @@ block content
   .section
     .row
       .column.large-7.hide-for-large-up
-        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:15em;")
+        .icon.h2.background-contain(style="background-image: url('/images/faces-cell-complete.png'); height:15em;")
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Secure, Shared Wallets
         h5.margin-bottom Copay is a true bitcoin wallet, not an account service. Secure your personal funds with multiple signatures, or just one.
         p Take security into your own hands and avoid trusting third parties with your savings. Like a joint-checking account, your Copay wallet can have multiple users. To send money, the group approves each transaction.
         p Manage shared funds with friends and coworkers. Share a wallet with your child and introduce them to bitcoin. Copay makes sharing a wallet simple and secure.
       .column.large-7.show-for-large-up
-        .icon.h2.background-contain(style="background-image: url('/images/faces-cell.png'); height:15em;")
+        .icon.h2.background-contain
+
+          //- Animation starts
+          img.side-phone.fade-in-right.wow.animated(src="/images/faces-cell.png") 
+          img.user-face.user-face-position1.delay-1.fade-in-right.wow.animated(src="/images/user1.svg") 
+          img.user-face.user-face-position2.delay-1.fade-in-right.wow.animated(src="/images/user2.svg") 
+          img.user-face.user-face-position3.delay-1.fade-in-right.wow.animated(src="/images/user3.svg") 
+          img.user-checked.check-position1.delay-4.fade-in.wow.animated(src="/images/user-checked.svg") 
+          img.user-checked.check-position2.delay-8.fade-in.wow.animated(src="/images/user-checked.svg") 
+          img.user-checked.check-position3.delay-12.fade-in.wow.animated(src="/images/user-checked.svg") 
+          img.user-checked-phone.check-phone-position1.delay-6.fade-in.wow.animated(src="/images/user-checked-phone.svg")
+          img.user-checked-phone.check-phone-position2.delay-10.fade-in.wow.animated(src="/images/user-checked-phone.svg")
+          img.user-checked-phone.check-phone-position3.delay-14.fade-in.wow.animated(src="/images/user-checked-phone.svg")
+          img.phone-green-screen.delay-16.fade-in.wow.animated(src="/images/side-phone-screen2.png")
+          //- Animation ends
         
   .section.bg-gray
     .row
-      .column.large-7
+      .column.large-7.hide-for-large-up
         .icon.h2.background-contain(style="background-image: url('/images/multiple-wallets.png'); height:15em;")
+      .column.large-7.show-for-large-up
+          //- Animation starts
+          img.base-phone.fade-in.wow.animated(src="/images/base-phone.png") 
+          img.yellow-wallet.delay-3.fade-in-up.wow.animated(src="/images/yellow-wallet.png") 
+          img.purple-wallet.delay-6.fade-in-up.wow.animated(src="/images/purple-wallet.png") 
+          //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Multiple Wallets,#[br] One App
         h5.margin-bottom-less No more tedious address management.
         p The Copay app securely stores multiple, distinct bitcoin wallets, allowing both business and privacy-conscious users to keep funds carefully separated.
         p Manage personal, business, and testnet wallets easily, all without leaving the app. Copay uses hierarchical-deterministic (HD) wallets, allowing for secure in-app wallet generation and backup.
+
+
 
         
   .section
@@ -55,17 +78,25 @@ block content
         .icon.h2.background-contain(style="background-image: url('/images/universal-network.png'); height: 15em;")
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Secure Payment Verification
-        h5.margin-bottom-less Press that #[code.small.radius send] button with confidence.
+        h5.margin-bottom-less Press that #[code.small.copay-ui-btn.fade-in.delay-6 send] button with confidence.
         p Copay is one of the first bitcoin wallets to support the full Bitcoin Payment Protocol (BIP 0070-0073). 
         p When you send money to a Payment Protocol-enabled merchant, Copay securely verifies that your payment will go to the right place.
       .column.large-7.show-for-large-up
-        .icon.h2.background-contain(style="background-image: url('/images/universal-network.png'); height: 15em;")
+        .icon.h2.background-contain
+          img.base-map.fade-in.wow.animated(src="/images/dotted-map.png") 
+          img.secpayphone.fade-in.delay-3.wow.animated(src="/images/secure-payment-phone.png") 
 
 
-  .section.bg-gray
+  .section.bg-gray.overflow
     .row
-      .column.large-7
+      .column.large-7.hide-for-large-up
         .icon.h2.background-contain(style="background-image: url('/images/livenet-testnet.png'); height:15em;")
+      .column.large-7.show-for-large-up
+          //- Animation starts
+          img.base-map.fade-in(src="/images/livenet-testnet-base.png") 
+          img.secpayphone.fade-in.delay-3.wow.animated(src="/images/livenet-testnet-text.png") 
+          img.secpayphone.fade-in.delay-6.wow.animated(src="/images/livenet-testnet-switch.png") 
+          //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Testnet Support for Developers
         h5.margin-bottom-less The first bitcoin wallet to bring testnet support to both iOS and Windows Phone. 
@@ -83,7 +114,15 @@ block content
         p Dozens of bitcoin developers have already contributed to Copay, and we're not finished yet. Every part of Copay, wallet and server, is available to be reviewed, improved, and developed by the community.
         p You can follow along, discuss improvements, and join in on GitHub at #[a(href="https://github.com/bitpay/copay") bitpay/copay] and #[a(href="https://github.com/bitpay/bitcore-wallet-service") bitpay/bitcore-wallet-service].
       .column.large-7.show-for-large-up
-        .icon.h2.background-contain(style="background-image: url('/images/code-trust.png'); height:15em;")
+        .icon.h2.background-contain
+          <!-- OpenSOurce starts -->
+          section.overflow
+            div#open-source
+            //- Animation starts
+            img.base-map.fade-in.wow.animated(src="/images/code-phone-base.png") 
+            img.secpayphone.fade-in.delay-3.wow.animated(src="/images/code-trust.png") 
+            //- Animation ends
+          <!-- OpenSOurce ends -->
   
   #download.section.bg-dark.text-center
     h2.white.margin-bottom-less Get the Copay Bitcoin Wallet
@@ -151,22 +190,4 @@ block content
       .column.large-3.small-6.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-flow.svg'); height:2.5em;")
         span Convenient Payment
-        p  Proposal Flow   
-  
-  footer
-    .row(role="navigation")
-      .column.small-1
-        a(href="/" title="Home").logo.margin-top
-
-      .column.small-11.show-for-large-up
-        ul.inline-list.right.padding-top-less.medium-padding-top
-          //- li
-          //-   a.menu-item.small.white(href="") Stats
-          //- li
-          //-   a.menu-item.small.white(href="./FAQ") FAQ
-          //- li
-          //-   a.menu-item.small.white(href="./about") About
-          li
-            a.menu-item.small.white(href="https://github.com/bitpay/copay") View the Code   
-    
-    
+        p  Proposal Flow

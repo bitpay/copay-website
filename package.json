@@ -9,7 +9,8 @@
     "gulp-replace": "^0.5.3"
   },
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "start": "gulp serve"
   },
   "engines": {
     "node": ">=0.10.0"
