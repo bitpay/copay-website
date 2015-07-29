@@ -28,7 +28,7 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-jade": "^1.0.0",
     "gulp-jshint": "^1.10.0",
-    "gulp-l10n": "0.0.2",
+    "gulp-l10n": "0.1.0",
     "gulp-load-plugins": "^0.10.0",
     "gulp-plumber": "^1.0.0",
     "gulp-rev-all": "^0.8.18",
