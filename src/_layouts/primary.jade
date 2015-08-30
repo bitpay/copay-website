@@ -19,16 +19,16 @@ html(lang='en')
       // Twitter Card data
       meta(name='twitter:card', content='summary')
       meta(name='twitter:site', content='@BitPay')
-      meta(name='twitter:title', content='Copay – Secure, Shared Bitcoin Wallet')
-      meta(name='twitter:description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.')
+      meta(name='twitter:title', content='Copay – Secure, Shared Bitcoin Wallet' s18n-attrs="content")
+      meta(name='twitter:description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.' s18n-attrs="content")
       meta(name='twitter:image', content='https://copay.io/images/social/card.jpg')
 
       // Open Graph data (Facebook and Reddit)
-      meta(property='og:title', content='Copay – Secure, Shared Bitcoin Wallet')
+      meta(property='og:title', content='Copay – Secure, Shared Bitcoin Wallet' s18n-attrs="content")
       meta(property='og:type', content='article')
       meta(property='og:url', content='https://copay.io/')
       meta(property='og:image', content='https://copay.io/images/social/avatar.png')
-      meta(property='og:description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.')
+      meta(property='og:description', content='Secure your bitcoin with the open source, HD‑multisignature wallet from BitPay.' s18n-attrs="content")
       meta(property='og:site_name', content='Copay.io')
 
     // Add to homescreen for Chrome on Android
@@ -38,7 +38,7 @@ html(lang='en')
     // Add to homescreen for Safari on iOS
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-status-bar-style', content='black')
-    meta(name='apple-mobile-web-app-title', content='Copay Website')
+    meta(name='apple-mobile-web-app-title', content='Copay Website' s18n-attrs="content")
     link(rel='apple-touch-icon-precomposed', href='apple-touch-icon-precomposed.png')
 
     // Tile icon for Win8 (144x144 + tile color)
@@ -55,9 +55,6 @@ html(lang='en')
   body
     .off-canvas-wrap.container(class='#{bodyClass}' data-offcanvas)
       .inner-wrap
-        block header
-          include ../_includes/header
-
         block content
 
         block footer

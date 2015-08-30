@@ -61,7 +61,6 @@ gulp.task('serve', ['build:dev'], function() {
   gulp.watch(['src/**/*.jade', '!src/_**/*.jade', 'src/**/*.html'], ['rebuild-jade', devDeps.reload]);
   gulp.watch(['src/{_styles,styles}/**/*.{scss,css}'], ['rebuild-styles', devDeps.reload]);
   gulp.watch(['*.js', 'tasks/*.js', 'src/**/*.js'], ['jshint']);
-  gulp.watch(['src/**/*.js'], ['rebuild-jade', devDeps.reload]);
   gulp.watch(['src/images/**/*'], ['images', devDeps.reload]);
 });
 
@@ -82,7 +81,7 @@ gulp.task('serve:dist', ['default'], function() {
 });
 
 gulp.task('rebuild-jade', function(cb) {
-  runSequence('jade:dev', ['extract-locales', 'jademin-uglify'], 'localize', cb);
+  runSequence('jade:dev', ['localize', 'jademin-uglify'], cb);
 });
 
 gulp.task('rebuild-styles', function(cb) {
