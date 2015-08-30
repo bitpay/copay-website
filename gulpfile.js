@@ -8,111 +8,30 @@ var runSequence = require('run-sequence');
 var env = {};
 var devDeps = {};
 
-gulp.task('default', ['delete'], function(cb) {
+function loadBrowserSync() {
+  devDeps.browserSync = require('browser-sync');
+  devDeps.reload = devDeps.browserSync.reload;
+}
+
+gulp.task('default', function(cb) {
+  runSequence('build', cb);
+});
+
+gulp.task('build', ['delete'], function(cb) {
   runSequence(
-    ['sass', 'jade', 'images', 'copy'],
-    ['styles', 'jademin'],
+    ['sass', 'jade', 'images', 'copy'], ['styles', 'jademin-uglify'],
     'hash',
     'localize',
     cb);
 });
 
-// delete dist
-gulp.task('delete', del.bind(null, ['dist']));
-
-// Compile & autoprefix styles
-gulp.task('sass', function() {
-  var AUTOPREFIXER_BROWSERS = [
-    'ie >= 8',
-    'ff >= 30',
-    'chrome >= 31',
-    'safari >= 5.1',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4',
-    '> 0.25%' //of global market share
-  ];
-
-  // For best performance, don't add partials to `gulp.src`
-  return gulp.src([
-      'src/styles/**/*.scss'
-    ])
-    .pipe($.if(env.development, $.sourcemaps.init()))
-    .pipe($.sass({
-      outputStyle: 'expanded',
-      precision: 10,
-      onError: console.error.bind(console, 'Sass error:')
-    }))
-    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe($.if(env.development, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist/styles'));
-});
-
-gulp.task('jade', function(cb) {
-  if(env.development){
-    runSequence('jade:dev', cb);
-  } else {
-    runSequence('jade:prod', cb);
-  }
-});
-
-gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
-    .pipe($.cached('images'))
-    .pipe($.imagemin({
-      progressive: true,
-      interlaced: true
-    }))
-    .pipe(gulp.dest('dist/images'))
-    .pipe($.size({
-      title: 'images'
-    }));
-});
-
-// Copy files at root level of 'src' to dist
-gulp.task('copy', function() {
-  return gulp.src(['src/*', '!src/_*', '!src/*.jade'], {
-      dot: true
-    })
-    .pipe($.cached('copy'))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('styles', function() {
-  return gulp.src(['dist/**/*.css'])
-    .pipe($.csso())
-    .pipe(gulp.dest('dist'));
-});
-
-//add hashes to filenames to bust caches, write rev-manifest.json
-gulp.task('hash', function() {
-  $.revAllInstance = new $.revAll({
-    dontRenameFile: [/^\/favicon.ico$/g, '.html'],
-    fileNameVersion: 'version.json'
-  });
-  return gulp.src(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/images/**/*'], {
-      base: path.join(process.cwd(), 'dist')
-    })
-    .pipe($.revAllInstance.revision())
-    .pipe(gulp.dest('dist'))
-    .pipe($.revAllInstance.versionFile())
-    .pipe(gulp.dest('dist'));
-});
-
-// Build and serve the output from the dist build
-gulp.task('serve:dist', ['default'], function() {
+gulp.task('build:dev', ['delete'], function(cb) {
+  env.development = true;
   loadBrowserSync();
-  devDeps.browserSync({
-    notify: false,
-    logPrefix: 'serve:dist',
-    https: true,
-    server: {
-      baseDir: 'dist',
-      serveStaticOptions: {
-        extensions: 'html'
-      }
-    }
-  });
+  runSequence(
+    ['sass', 'jade:dev', 'images', 'copy'], ['styles', 'jademin-uglify'],
+    'localize',
+    cb);
 });
 
 // Watch for changes & reload
@@ -146,15 +65,102 @@ gulp.task('serve', ['build:dev'], function() {
   gulp.watch(['src/images/**/*'], ['images', devDeps.reload]);
 });
 
-function loadBrowserSync(){
-  devDeps.browserSync = require('browser-sync');
-  devDeps.reload = devDeps.browserSync.reload;
-}
-
-gulp.task('build:dev', function(cb) {
-  env.development = true;
+// Build and serve the output from the dist build
+gulp.task('serve:dist', ['default'], function() {
   loadBrowserSync();
-  runSequence('default', cb);
+  devDeps.browserSync({
+    notify: false,
+    logPrefix: 'serve:dist',
+    https: true,
+    server: {
+      baseDir: 'dist',
+      serveStaticOptions: {
+        extensions: 'html'
+      }
+    }
+  });
+});
+
+gulp.task('rebuild-jade', function(cb) {
+  runSequence('jade:dev', ['extract-locales', 'jademin-uglify'], 'localize', cb);
+});
+
+gulp.task('rebuild-styles', function(cb) {
+  runSequence('sass', 'styles', cb);
+});
+
+// delete dist
+gulp.task('delete', del.bind(null, ['dist', 'html']));
+
+// Compile & autoprefix styles
+gulp.task('sass', function() {
+  var AUTOPREFIXER_BROWSERS = [
+    'ie >= 8',
+    'ff >= 30',
+    'chrome >= 31',
+    'safari >= 5.1',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4',
+    '> 0.25%' //of global market share
+  ];
+
+  // For best performance, don't add partials to `gulp.src`
+  return gulp.src([
+      'src/styles/**/*.scss'
+    ])
+    .pipe($.if(env.development, $.sourcemaps.init()))
+    .pipe($.sass({
+      outputStyle: 'expanded',
+      precision: 10,
+      onError: console.error.bind(console, 'Sass error:')
+    }))
+    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe($.if(env.development, $.sourcemaps.write()))
+    .pipe(gulp.dest('dist/styles'));
+});
+
+gulp.task('styles', function() {
+  return gulp.src(['dist/**/*.css'])
+    .pipe($.csso())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('images', function() {
+  return gulp.src('src/images/**/*')
+    .pipe($.cached('images'))
+    .pipe($.imagemin({
+      progressive: true,
+      interlaced: true
+    }))
+    .pipe(gulp.dest('dist/images'))
+    .pipe($.size({
+      title: 'images'
+    }));
+});
+
+// Copy files at root level of 'src' to dist
+gulp.task('copy', function() {
+  return gulp.src(['src/*', '!src/_*', '!src/*.jade'], {
+      dot: true
+    })
+    .pipe($.cached('copy'))
+    .pipe(gulp.dest('dist'));
+});
+
+//add hashes to filenames to bust caches, write rev-manifest.json
+gulp.task('hash', function() {
+  $.revAllInstance = new $.revAll({
+    dontRenameFile: [/^\/favicon.ico$/g, '.html'],
+    fileNameVersion: 'version.json'
+  });
+  return gulp.src(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/images/**/*'], {
+      base: path.join(process.cwd(), 'dist')
+    })
+    .pipe($.revAllInstance.revision())
+    .pipe(gulp.dest('dist'))
+    .pipe($.revAllInstance.versionFile())
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('jshint', function() {
@@ -168,15 +174,6 @@ gulp.task('jshint', function() {
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!(devDeps.browserSync && devDeps.browserSync.active), $.jshint.reporter('fail')));
 });
-
-gulp.task('rebuild-jade', function(cb) {
-  runSequence(['sass', 'jade:dev'], ['jademin', 'styles', 'localize'], cb);
-});
-
-gulp.task('rebuild-styles', function(cb) {
-  runSequence('sass', 'styles', cb);
-});
-
 
 // Load custom tasks from the `tasks` directory
 var tasks;
