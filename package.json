@@ -6,11 +6,13 @@
     "gulp-debug": "^2.0.0",
     "gulp-gh-pages": "^0.5.1",
     "gulp-prefix": "0.0.14",
-    "gulp-replace": "^0.5.3"
+    "gulp-replace": "^0.5.3",
+    "s18n": "^2.0.0"
   },
   "scripts": {
     "test": "gulp",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "simulate-translations": "s18n map locales/en.json > locales/accents.json"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -28,6 +30,7 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-jade": "^1.0.0",
     "gulp-jshint": "^1.10.0",
+    "gulp-l10n": "1.2.0",
     "gulp-load-plugins": "^0.10.0",
     "gulp-plumber": "^1.0.0",
     "gulp-rev-all": "^0.8.18",

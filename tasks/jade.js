@@ -30,6 +30,7 @@ function jade(dev){
         jademin: jademinMixin
       }
     }))
+    .pipe(gulp.dest('html'))
     .pipe(gulp.dest('dist'));
 }
 
@@ -38,7 +39,7 @@ gulp.task('uncached-rebuild-jade', function(cb) {
   runSequence('rebuild-jade', cb);
 });
 
-gulp.task('jademin', function(cb) {
+gulp.task('jademin-uglify', function(cb) {
   var outputPaths = [];
   var job = {};
   for (var outputPath in jademinSrcs) {

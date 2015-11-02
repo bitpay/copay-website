@@ -16,7 +16,7 @@ block content
     .bg-gray.border-bottom-gray
       .row.padding-less.text-center
         mixin logos(name, title, url)
-          a(href="#{url}" target="blank" alt="#{title}" title="#{title}")
+          a(href="#{url}" target="blank" alt="#{title}" title="#{title}" cancel-s18n)
             .home-logo.h2.unselectable.grey-hover(style="background-image: url('/images/bw-icons/#{name}.svg'); width: 0.75em; height: 0.75em; margin-right: 0.55em")
         +logos("apple", "iOS", "https://itunes.apple.com/us/app/copay/id951330296")
         +logos("google", "Google Play", "https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en")
@@ -99,7 +99,7 @@ block content
           //- Animation ends
       .column.large-5
         h2.header__bottom-border__large-left.padding-top Testnet Support for Developers
-        h5.margin-bottom-less The first bitcoin wallet to bring testnet support to both iOS and Windows Phone. 
+        h5.margin-bottom-less The first bitcoin wallet to bring testnet support to both iOS and Windows Phone.
         p Copay includes native support for the Bitcoin Testnet, perfect for testing new bitcoin applications across multiple platforms.
         p With multisignature (P2SH) and multiple wallet support, Copay makes it simple for developers to test and demo bitcoin applications without fumbling between other mobile apps. 
 
@@ -127,43 +127,43 @@ block content
   #download.section.bg-dark.text-center
     h2.white.margin-bottom-less Get the Copay Bitcoin Wallet
     .row.text-center
-      a(href="https://itunes.apple.com/us/app/copay/id951330296" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="https://itunes.apple.com/us/app/copay/id951330296" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-applestore.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Find it on the
           h6.white.margin-none iOS App Store
           
-      a(href="https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="https://play.google.com/store/apps/details?id=com.bitpay.copay&hl=en" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-playstore.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Get it on
           h6.white.margin-none Google Play
           
-      a(href="http://www.windowsphone.com/en-us/store/app/copay-wallet/4372479b-a064-4d18-8bd3-74a3bdb81c3a" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="http://www.windowsphone.com/en-us/store/app/copay-wallet/4372479b-a064-4d18-8bd3-74a3bdb81c3a" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-winstore.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Download from
           h6.white.margin-none Windows Store 
                
-      a(href="https://chrome.google.com/webstore/detail/copay/cnidaodnidkbaplmghlelgikaiejfhja?hl=en" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="https://chrome.google.com/webstore/detail/copay/cnidaodnidkbaplmghlelgikaiejfhja?hl=en" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-chrome-app.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Get the
           h6.white.margin-none Chrome App
           
-      a(href="https://github.com/bitpay/copay/releases/latest" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="https://github.com/bitpay/copay/releases/latest" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-mac-os-x.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Available for
           h6.white.margin-none Mac OS X
 
-      a(href="https://github.com/bitpay/copay/releases/latest" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="https://github.com/bitpay/copay/releases/latest" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-microsoft.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Download for
           h6.white.margin-none Windows
 
-      a(href="https://github.com/bitpay/copay/releases/latest" target="blank").white.btn.btn-gray-medium-border.download
+      a(href="https://github.com/bitpay/copay/releases/latest" target="blank" cancel-s18n).white.btn.btn-gray-medium-border.download
         .icon.left.h2.background-contain(style="background-image: url('/images/icon-linux.svg'); width: 2em; height: 1em;")
         .text-left.line-height-less
           small.gray-medium Get it for
@@ -177,17 +177,13 @@ block content
     .row
       .column.large-3.small-6.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-globe.svg'); height:2.5em;")
-        span Prices In  150
-        p Currencies 
+        p Prices In  150 Currencies
       .column.large-3.small-6.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-speech.svg'); height:2.5em;")
-        span Multi-Language
-        p  Support 
+        p  Multi-Language Support
       .column.large-3.small-6.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-wallet-arrow-down.svg'); height:2.5em;")
-        span HD Wallet 
-        p  Backups 
+        p  HD Wallet  Backups
       .column.large-3.small-6.text-center
         .icon.h2.background-contain.margin-bottom-less(style="background-image: url('/images/icon-flow.svg'); height:2.5em;")
-        span Convenient Payment
-        p  Proposal Flow
+        p  Convenient Payment Proposal Flow

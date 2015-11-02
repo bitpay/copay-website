@@ -8,7 +8,7 @@ var runSequence = require('run-sequence');
 var env = {};
 var devDeps = {};
 
-function loadBrowserSync(){
+function loadBrowserSync() {
   devDeps.browserSync = require('browser-sync');
   devDeps.reload = devDeps.browserSync.reload;
 }
@@ -19,8 +19,9 @@ gulp.task('default', function(cb) {
 
 gulp.task('build', ['delete'], function(cb) {
   runSequence(
-    ['sass', 'jade', 'images', 'copy'], ['styles', 'jademin'],
+    ['sass', 'jade', 'images', 'copy'], ['styles', 'jademin-uglify'],
     'hash',
+    'localize',
     cb);
 });
 
@@ -28,7 +29,8 @@ gulp.task('build:dev', ['delete'], function(cb) {
   env.development = true;
   loadBrowserSync();
   runSequence(
-    ['sass', 'jade:dev', 'images', 'copy'], 'jademin', ['styles'],
+    ['sass', 'jade:dev', 'images', 'copy'], ['styles', 'jademin-uglify'],
+    'localize',
     cb);
 });
 
@@ -59,7 +61,6 @@ gulp.task('serve', ['build:dev'], function() {
   gulp.watch(['src/**/*.jade', '!src/_**/*.jade', 'src/**/*.html'], ['rebuild-jade', devDeps.reload]);
   gulp.watch(['src/{_styles,styles}/**/*.{scss,css}'], ['rebuild-styles', devDeps.reload]);
   gulp.watch(['*.js', 'tasks/*.js', 'src/**/*.js'], ['jshint']);
-  gulp.watch(['src/**/*.js'], ['rebuild-jade', devDeps.reload]);
   gulp.watch(['src/images/**/*'], ['images', devDeps.reload]);
 });
 
@@ -80,7 +81,7 @@ gulp.task('serve:dist', ['default'], function() {
 });
 
 gulp.task('rebuild-jade', function(cb) {
-  runSequence(['sass', 'jade:dev'], 'jademin', ['styles'], cb);
+  runSequence('jade:dev', ['localize', 'jademin-uglify'], cb);
 });
 
 gulp.task('rebuild-styles', function(cb) {
@@ -88,7 +89,7 @@ gulp.task('rebuild-styles', function(cb) {
 });
 
 // delete dist
-gulp.task('delete', del.bind(null, ['dist']));
+gulp.task('delete', del.bind(null, ['dist', 'html']));
 
 // Compile & autoprefix styles
 gulp.task('sass', function() {
