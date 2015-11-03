@@ -12,19 +12,11 @@ var uglifyJS = require('uglify-js');
 var jademinSrcs = {};
 
 gulp.task('jade', function() {
-  return jade();
-});
-
-gulp.task('jade:dev', function() {
-  return jade(true);
-});
-
-function jade(dev){
   return gulp.src(['src/**/*.jade', '!src/_**/*.jade'])
     .pipe($.cached('jade'))
     .pipe($.plumber())
     .pipe($.jade({
-      pretty: dev,
+      pretty: (gulp.environment.development === true),
       locals: {
         getObjectFromJson: getObjectFromJson,
         jademin: jademinMixin
@@ -32,7 +24,11 @@ function jade(dev){
     }))
     .pipe(gulp.dest('html'))
     .pipe(gulp.dest('dist'));
-}
+});
+
+gulp.task('rebuild-jade', function(cb) {
+  runSequence('jade', 'jademin-uglify', cb);
+});
 
 gulp.task('uncached-rebuild-jade', function(cb) {
   delete $.cached.caches.jade;
@@ -46,7 +42,8 @@ gulp.task('jademin-uglify', function(cb) {
     outputPaths.push(outputPath);
     job[outputPath] = [];
     for (var inputPath in jademinSrcs[outputPath]) {
-      job[outputPath][inputPath] = '{components,src}' + jademinSrcs[outputPath][inputPath];
+      job[outputPath][inputPath] =
+      '{components,src}' + jademinSrcs[outputPath][inputPath];
     }
   }
   async.each(outputPaths, function(name, cb2) {
@@ -54,16 +51,17 @@ gulp.task('jademin-uglify', function(cb) {
     var srcMapName = name + '.map';
     var contents = uglifyJS.minify(scriptPaths, {
       outSourceMap: srcMapName,
-      sourceRoot: '../'
+      sourceRoot: '../',
+      // warnings: true
     });
     async.parallel([
-      function(cb3){
+      function(cb3) {
         writeFile('dist' + name, contents.code, cb3);
       },
-      function(cb3){
+      function(cb3) {
         writeFile('dist' + srcMapName, contents.map, cb3);
       }
-    ], function(err){
+    ], function(err) {
       if (err) {
         console.log('Jademin: File write failed - ' + err);
       }
@@ -88,15 +86,16 @@ function jademinMixin(block, path) {
   if (typeof jademinSrcs[path] === 'undefined') {
     jademinSrcs[path] = matches;
   } else {
-    if(!arraysEqual(jademinSrcs[path], matches)){
-      throw new Error('Jademin: path "' + path + '" is already taken. Did you add a new script? Try restarting the node process.');
+    if (!arraysEqual(jademinSrcs[path], matches)) {
+      throw new Error('Jademin: path "' + path + '" is already taken. ' +
+      'Did you add a new script? Try restarting the node process.');
     }
   }
 }
 
-function writeFile (path, contents, cb) {
-  mkdirp(getDirName(path), function (err) {
-    if (err){
+function writeFile(path, contents, cb) {
+  mkdirp(getDirName(path), function(err) {
+    if (err) {
       return cb(err);
     }
     fs.writeFile(path, contents, cb);
@@ -122,10 +121,10 @@ function arraysEqual(a, b) {
 }
 
 function getMatches(string, regex) {
-  var matches = [],
-    match;
+  var results = [];
+  var match;
   while (!!(match = regex.exec(string))) {
-    matches.push(match[1]);
+    results.push(match[1]);
   }
-  return matches;
+  return results;
 }
