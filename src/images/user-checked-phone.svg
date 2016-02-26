@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-    <title>Imported Layers</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Imported-Layers" sketch:type="MSLayerGroup">
-            <path d="M10.7611724,7.22062069 C10.7611724,3.49082759 8.45986207,0.466827586 5.62075862,0.466827586 C2.78213793,0.466827586 0.480344828,3.49082759 0.480344828,7.22062069 C0.480344828,10.9508966 2.78213793,13.9744138 5.62075862,13.9744138 C8.45986207,13.9744138 10.7611724,10.9508966 10.7611724,7.22062069" id="Fill-1" fill="#1ABC9C" sketch:type="MSShapeGroup"></path>
-            <path d="M4.95165517,9.97717241 L2.85841379,7.5237931 L3.59510345,6.43855172 L4.86958621,7.9322069 L7.48565517,4.14834483 L8.30489655,5.12641379 L4.95165517,9.97717241" id="Fill-2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><title>ios7-gear + Oval 11</title><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><ellipse stroke="#1ABC9C" stroke-width=".879" fill="#1ABC9C" cx="7.445" cy="7.445" rx="7.445" ry="7.445"/><path d="M6.466 8.15L4.75 6.177l-1.223 1.41 2.94 3.386 4.897-5.643-1.225-1.41-3.674 4.23z" fill="#FFF"/></g></svg>

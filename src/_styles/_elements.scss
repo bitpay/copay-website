@@ -96,28 +96,27 @@ a:hover.lost-link{
  /* Classes for first animation */
 
   .side-phone {
-  width: 181px;
-  height: 531px;  
+  height: 576px;
   position: absolute;
-  right: 1em;
+  right: -1em;
   top: 0;
  }
 
   .user-checked {
   width: 39px;
-  height: 39px;  
+  height: 39px;
   position: absolute;
  }
 
  .user-face {
   width: 85px;
-  height: 85px;  
+  height: 85px;
   position: absolute;
 
  }
 
   .user-checked-phone {
-  height: 14px;  
+  height: 14px;
   position: absolute;
  }
 
@@ -132,8 +131,8 @@ a:hover.lost-link{
  }
 
 .check-phone-position1 {
-  right: 1.7em;
-  top: 8.5em;
+  right: 0.2em;
+  top: 12.6em;
  }
 
  .user-face-position2 {
@@ -147,8 +146,8 @@ a:hover.lost-link{
  }
 
  .check-phone-position2 {
-  right: 1.7em;
-  top: 9.5em;
+   right: 0.2em;
+   top: 13.5em;
  }
 
    .user-face-position3 {
@@ -162,8 +161,8 @@ a:hover.lost-link{
  }
 
  .check-phone-position3 {
-  right: 1.7em;
-  top: 10.4em;
+   right: 0.2em;
+   top: 14.4em;
  }
 
  .checked-screen-position {
@@ -172,11 +171,12 @@ a:hover.lost-link{
   }
 
   .phone-green-screen {
-  width: 158.5px;
-  height: 423px;  
+    width: 250px;
+  height: 443px;
   position: absolute;
-  right: 1.6em;
-  top: 1.64em;
+  right: -0.26em;
+  top: 1.96em;
+
  }
 
 
@@ -203,7 +203,7 @@ a:hover.lost-link{
   left: 0;
   top: 0;
  }
- 
+
  /* Classes for the third animation */
 
 .base-map ,.secpayphone ,.base-tl, .tl-layer1, .tl-layer2{
@@ -212,7 +212,7 @@ a:hover.lost-link{
   top: 0;
  }
 
- 
+
 
  /* Classes for the fourth animation */
 
@@ -236,4 +236,3 @@ a:hover.lost-link{
   position: absolute;
   overflow: hidden;
    }
-
