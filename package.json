@@ -17,7 +17,7 @@
     "simulate-translations": "s18n map locales/en.json > locales/accents.json"
   },
   "engines": {
-    "node": "^0.12.7"
+    "node": "^4"
   },
   "private": true,
   "dependencies": {
