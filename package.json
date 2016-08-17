@@ -2,7 +2,7 @@
   "name": "copay-website",
   "version": "1.0.0",
   "devDependencies": {
-    "browser-sync": "^2.9.10",
+    "browser-sync": "^2.12.10",
     "gulp-debug": "^2.1.1",
     "gulp-gh-pages": "^0.5.2",
     "gulp-imagemin": "^3.0.1",
