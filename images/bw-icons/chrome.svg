@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>chrome</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="chrome" sketch:type="MSArtboardGroup" fill="#B3B3B3">
+            <g id="chrome-(1)" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+                <path d="M21.9236994,12.1572254 L21.9236994,12.1317919 L41.6092486,12.1317919 C38.0231214,4.93410405 30.5710983,0 21.9745665,0 C14.8531792,0 8.52023121,3.38265896 4.5017341,8.64739884 L12.1317919,21.8473988 C12.182659,16.5063584 16.5572254,12.1572254 21.9236994,12.1572254 L21.9236994,12.1572254 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                <circle id="Oval" sketch:type="MSShapeGroup" cx="22.0254335" cy="22" r="8.2150289"></circle>
+                <path d="M26.7306358,13.4289017 C29.7063584,15.1075145 31.7410405,18.3121387 31.7410405,21.9745665 C31.7410405,24.2381503 30.9780347,26.3236994 29.6809249,27.9768786 L20.499422,43.8982659 C20.982659,43.9236994 21.4913295,43.9491329 22,43.9491329 C34.1317919,43.9491329 43.9745665,34.1063584 43.9745665,21.9745665 C43.9745665,18.9479769 43.3641618,16.0485549 42.2450867,13.4289017 L26.7306358,13.4289017 L26.7306358,13.4289017 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                <path d="M21.9236994,31.766474 C17.8543353,31.766474 14.3699422,29.299422 12.8693642,25.7641618 L3.66242775,9.81734104 C1.34797688,13.3017341 0,17.4728324 0,21.9745665 C0,33.1398844 8.31676301,42.3468208 19.0751445,43.7710983 L26.7052023,30.5456647 C25.3063584,31.3086705 23.6786127,31.766474 21.9236994,31.766474 L21.9236994,31.766474 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
