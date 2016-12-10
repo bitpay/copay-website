@@ -39,7 +39,7 @@
     "gulp-load-plugins": "^1.2.4",
     "gulp-plumber": "^1.0.1",
     "gulp-rev-all": "^0.8.21",
-    "gulp-sass": "^2.0.4",
+    "gulp-sass": "^3.0.0",
     "gulp-sass-lint": "^1.0.1",
     "gulp-size": "^2.0.0",
     "gulp-sourcemaps": "^1.6.0",
